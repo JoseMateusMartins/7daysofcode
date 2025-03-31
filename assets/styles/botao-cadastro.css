@@ -1,0 +1,103 @@
+.botao__cadastro {
+    position: relative;
+}
+
+.botao__cadastro-flutuante {
+    position: fixed;
+    right: 1rem;
+    bottom: 4.375rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0 3px 6px #4894FF90);
+    z-index: 5;
+    background-color: var(--azul);
+}
+
+.botao__cadastro-flutuante span {
+    position: fixed;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../img/maisicone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao__flutuante-opcoes {
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80vh 0 1.25rem 0;
+    padding-bottom: 8.125rem;
+    transition: .3s ease;
+    transform: scale(0);
+    transform-origin: 85% bottom;
+    background: radial-gradient(circle at bottom right, black, 20%, transparent);
+    z-index: 2;
+}
+
+.botao__cadastro-flutuante:focus+.botao__flutuante-opcoes {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.botao__flutuante-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.botao__flutuante-texto {
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    background: var(--branco);
+    border-radius: 1.25rem;
+    padding: 0 0.5rem;
+    margin-right: 0.75rem;
+}
+
+.botao__cadastro-item {
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: relative;
+    filter: drop-shadow(0 3px 6px #4894FF90);
+    border: none;
+    background-color: var(--azul);
+}
+
+.botao__cadastro-item span {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.botao__cadastro-item span.local {
+    background-image: url(../img/pinfabiconee.svg);
+}
+
+.botao__cadastro-item span.remoto {
+    background-image: url(../img/Camerafab.svg);
+}
+
+@media (min-width: 1728px) {
+    .botao__cadastro {
+        display: none;
+    }
+}

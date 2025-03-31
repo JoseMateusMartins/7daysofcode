@@ -1,0 +1,114 @@
+.rodape__informacoes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: var(--branco);
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 2rem;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.barra__opcoes {
+    border: none;
+    background-color: var(--branco);
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+
+.barra__opcoes-imagem {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(0%) saturate(11%) hue-rotate(310deg) brightness(94%) contrast(78%);
+    opacity: 40%;
+}
+
+.barra__opcoes-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cor-titulo);
+    opacity: 40%;
+    font-size: 0.75rem;
+}
+
+.barra__opcoes-texto:hover {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(82%) saturate(2188%) hue-rotate(197deg) brightness(103%) contrast(101%);
+    opacity: 100%;
+}
+
+.rodape__consulta {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .rodape__informacoes {
+        display: inline;
+        width: 18%;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .barra__opcoes-texto {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 1rem;
+        margin-top: 0.75rem;
+    }
+
+    .barra__opcoes-imagem {
+        margin-right: 0.5rem;
+        width: 1.25rem;
+    }
+}
+
+@media (min-width: 1728px) {
+    .rodape__informacoes {
+        width: 10%;
+    }
+
+    .barra__opcoes-texto {
+        font-size: 1.125rem;
+    }
+
+    .rodape__consulta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--branco);
+        padding: 2rem;
+        gap: 1rem
+    }
+
+    .rodape__nome-paciente,
+    .rodape__observacoes {
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 20%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .rodape__consulta select {
+        border-radius: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        width: 6%;
+    }
+
+    .rodape__botao {
+        width: 8%;
+        border: none;
+        background-color: var(--azul);
+        color: var(--branco);
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .rodape__botao:hover {
+        background-color: var(--laranja);
+    }
+}

@@ -1,0 +1,165 @@
+.container {
+    margin-bottom: 4.6875rem;
+}
+
+.container__titulo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--cor-titulo);
+    margin: 2rem 0 0.5rem 1rem;
+}
+
+.consulta {
+    background-color: var(--branco);
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.consulta__informacoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.consulta__perfil {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin: 1.28125rem 0 1.03125rem 1rem;
+}
+
+.consulta__paciente-nome {
+    font-weight: 700;
+}
+
+.consulta__status {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.consulta__status-texto {
+    font-size: 0.75rem;
+    color: var(--cor-texto);
+}
+
+.consulta__icone {
+    margin: 1rem 1rem 1.3125rem auto;
+    background-color: #f6f6f6;
+    padding: 0.75rem;
+    border-radius: 2rem;
+}
+
+.linha {
+    border: 1px solid var(--cor-titulo);
+    opacity: 10%;
+    margin-top: auto;
+}
+
+.consulta__horario-duracao {
+    margin: 0.75rem 0 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--cor-titulo);
+}
+
+.consulta__ligacao {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.25rem 0 1rem 0;
+}
+
+.consulta__ligacao-video,
+.consulta__ligacao-audio {
+    padding: 1.125rem 0.875rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    width: 35%;
+    font-weight: 500;
+}
+
+.consulta__ligacao-video {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.consulta__ligacao-audio {
+    border: 1px solid #ECECEC;
+    color: var(--cor-titulo);
+}
+
+.consulta__local {
+    padding: 0.25rem 0 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.consulta__local-endereço {
+    padding: 1.125rem 0.875rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    width: 83%;
+    font-weight: 500;
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-left: 9.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .consultas__marcadas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .consulta__ligacao-audio,
+    .consulta__ligacao-video,
+    .consulta__local-endereço {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1728px) {
+    .container {
+        margin-left: 12rem;
+    }
+    
+    .container__titulo {
+        margin-left: 1.5rem;
+    }
+
+    .consultas__marcadas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 0.85rem;
+    }
+
+    .consulta {
+        width: 32rem;
+    }
+
+    .consulta__paciente-nome {
+        font-size: 1.125rem;
+    }
+
+    .consulta__ligacao-audio,
+    .consulta__ligacao-video,
+    .consulta__local-endereço {
+        font-size: 1rem;
+    }
+
+    .consulta__local-endereço {
+        width: 88%;
+    }
+
+    .consulta__ligacao-audio,
+    .consulta__ligacao-video {
+        width: 40%;
+    }
+}
